@@ -1,0 +1,25 @@
+<idea-plugin>
+    <id>net.makerbox.rgt</id>
+    <name>Respect Git Template</name>
+    <vendor email="mactkg@gmail.com" url="https://github.com/mactkg">mactkg</vendor>
+
+    <description><![CDATA[
+        Respect git's commit.template!
+
+        This plugin add "Replace Commit Message to Git Template" button at "Commit Changes" View.
+    ]]></description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.vcs</depends>
+
+    <actions>
+        <action id="Rgt.UseGitTemplateAction"
+                class="net.makerbox.rgt.UseGitTemplateAction"
+                text="Replace Commit Message to Git Template"
+                description="Replace commit message to commit.template of git config">
+            <add-to-group group-id="Vcs.MessageActionGroup" anchor="first"/>
+        </action>
+    </actions>
+</idea-plugin>
